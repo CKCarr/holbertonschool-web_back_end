@@ -9,7 +9,7 @@
 * Each attribute must be stored in an “underscore” attribute version
 * (ex: name is stored in _name)
 * The default string description of the class should
-* return the airport code 
+* return the airport code
 * (example Airport [SFO] { _name: 'San Francisco Airport', _code: 'SFO' }
 [object SFO]).
 *
@@ -29,6 +29,7 @@ export default class Airport {
       this._code = code;
     }
   }
+
   toString() {
     return `[object ${this._code}]`;
   }
