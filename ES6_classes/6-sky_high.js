@@ -13,7 +13,6 @@ import Building from './5-building';
 *  the following string Evacuate slowly the NUMBER_OF_FLOORS floors.
 */
 
-
 export default class SkyHighBuilding extends Building {
   constructor(sqft, floors) {
     // call parent constructor to set sqft
@@ -24,9 +23,11 @@ export default class SkyHighBuilding extends Building {
       this._floors = floors;
     }
   }
+
   get floors() {
     return this._floors;
   }
+
   evacuationWarningMessage() {
     return `Evacuate slowly the ${this._floors} floors.`;
   }
