@@ -1,4 +1,4 @@
-import listOfStudents from "./9-hoisting.js";
+import {listOfStudents} from "./9-hoisting";
 
 console.log(listOfStudents);
 
@@ -7,3 +7,4 @@ const listPrinted = listOfStudents.map(
 );
 
 console.log(listPrinted)
+
