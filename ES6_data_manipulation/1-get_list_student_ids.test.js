@@ -1,6 +1,6 @@
 // Import the function for testing
-import getListStudentIds from '1-get_list_student_ids.js';
-import getListStudents from "0-get_list_students.js";
+import getListStudentIds from './1-get_list_student_ids.js';
+import getListStudents from "./0-get_list_students.js";
 
 // Test when the input is an array of objects
 test('Returns an array of student IDs when an array of student objects is passed', () => {

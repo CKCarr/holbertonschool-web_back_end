@@ -1,4 +1,4 @@
-const getListStudents = require('0-get_list_students.js');
+import getListStudents from './0-get_list_students.js';
 
 test('Check if getListStudents returns the correct array of objects', () => {
   const expected = [
