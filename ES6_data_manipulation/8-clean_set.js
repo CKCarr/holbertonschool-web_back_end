@@ -14,12 +14,12 @@ When a value starts with startString
 */
 
 export default function cleanSet(set, startString) {
-  if (startString === '') {
+  if (typeof startString !== 'string' || startString === '') {
     return '';
   }
-  // convert set to array and filter
+
   const filteredArray = Array.from(set)
-    .filter((value) => value.startsWith(startString))
+    .filter((value) => typeof value === 'string' && value.startsWith(startString))
     .map((value) => value.substring(startString.length));
 
   return filteredArray.join('-');

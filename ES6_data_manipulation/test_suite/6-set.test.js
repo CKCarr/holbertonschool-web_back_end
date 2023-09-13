@@ -1,7 +1,7 @@
-import setFromArray from "../6-set.js";
+import setFromArray from '../6-set.js';
 
-test("setFromArray tests if a set contains certain ints", () => {
-  const obj = { abc: 'def'};
+test('setFromArray tests if a set contains certain ints', () => {
+  const obj = { abc: 'def' };
   const set = setFromArray([1, 2, 5, true, false, 'test', obj]);
 
   expect(set.has(1)).toBe(true);

@@ -15,16 +15,18 @@ the error `Position outside range` should be thrown.
 */
 
 export default function createInt8TypedArray(length, position, value) {
-  // create new Array of the given length
-  const buffer = new ArrayBuffer(length);
-  // create a view for this buffer as an array of 8 bit integer values
-  const int8View = new Int8Array(buffer);
-  // Error Hanling: check if the position is within the range of the array
-  if (position >= length) {
-    throw new Error('Position outside range');
+  try {
+    const buffer = new ArrayBuffer(length);
+    const int8View = new Int8Array(buffer);
+
+    if (position >= length) {
+      throw new Error("Position outside range");
+    }
+
+    int8View[position] = value;
+
+    return new DataView(buffer);
+  } catch (error) {
+    throw error;
   }
-  // set the value at the specified position
-  int8View[position] = value;
-  // return the ArrayBuffer
-  return buffer;
 }

@@ -15,6 +15,17 @@ For each entry of the map where the quantity is 1,
    the error 'Cannot process' should be thrown.
 */
 
-export default function updateUniqueItems() {
-
+export default function updateUniqueItems(groceryMap) {
+  // validate arguments and handle errors
+  if (!(groceryMap instanceof Map)) {
+    throw new Error('Cannot process');
+  }
+  // loop through each entry in the map
+  groceryMap.forEach((value, key) => {
+    // if value is 1 update the quantity to 100
+    if (value === 1) {
+      groceryMap.set(key, 100);
+    }
+  });
+  return groceryMap;
 }
