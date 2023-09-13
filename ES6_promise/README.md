@@ -1,11 +1,9 @@
 # ES6_promises Learning Objectives:
-
 <style>
 summary  b {
     font-size: 18px
   }
 </style>
-
 <details open>
 <summary>
   <b>Promises (how, why, and what)</b>

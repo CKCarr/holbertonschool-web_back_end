@@ -14,3 +14,4 @@ When the argument is:
         reject the promise with an error object with the message
         ''The fake API is not working currently''
 */
+
