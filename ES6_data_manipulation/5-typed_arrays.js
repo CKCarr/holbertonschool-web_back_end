@@ -1,6 +1,7 @@
 /*
 Create a function named createInt8TypedArray that
 returns a new 'ArrayBuffer' with an 'Int8' value at a specific position.
+
 It should accept three arguments:
 @length (Number)  A number representing the length of the ArrayBuffer.
 @position (Number)  A number representing the position
