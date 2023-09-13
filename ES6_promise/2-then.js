@@ -22,7 +22,7 @@ function handleResponseFromAPI(promise) {
         };
     })
     .catch(() => new Error())
-    .finally(() => {
+    .finally(() => { // callback
         console.log('Got a response from the API');
     });
 }
