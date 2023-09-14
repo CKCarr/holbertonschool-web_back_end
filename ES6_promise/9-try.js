@@ -22,5 +22,24 @@ Example:
 */
 
 export default function guardrail(mathFunction) {
-  
+  // Initialize an empty array named 'queue'
+  const queue = [];
+
+  // Use try/catch to execute mathFunction and handle errors
+  try {
+    // Execute the function and store the result
+    const result = mathFunction();
+    // Append the result to the queue
+    queue.push(result);
+  } catch (error) {
+    // If an error occurs, append the error message to the queue
+    queue.push(`Error: ${error.message}`);
+
+  }
+
+  // In every case, append the message 'Guardrail was processed' to the queue
+  queue.push('Guardrail was processed');
+
+  // Return the queue array
+  return queue;
 }
